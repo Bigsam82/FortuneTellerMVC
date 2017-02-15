@@ -1,0 +1,51 @@
+﻿@model IEnumerable<fortune_teller_mvc.Models.Fortune>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RetireYears)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VacHome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Transportation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RetirementFunds)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.RetireYears)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VacHome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Transportation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RetirementFunds)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.FortuneID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.FortuneID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.FortuneID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FortuneTellerMVCModelStoreContainer" CdmEntityContainer="FortuneTellerMVCEntities">
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="FortuneTellerMVCModel.Customer">
+        <MappingFragment StoreEntitySet="Customers">
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+          <ScalarProperty Name="NumOfSibs" ColumnName="NumOfSibs" />
+          <ScalarProperty Name="BirthMonth" ColumnName="BirthMonth" />
+          <ScalarProperty Name="FavColor" ColumnName="FavColor" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="FortuneID" ColumnName="FortuneID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fortunes">
+      <EntityTypeMapping TypeName="FortuneTellerMVCModel.Fortune">
+        <MappingFragment StoreEntitySet="Fortunes">
+          <ScalarProperty Name="FortuneID" ColumnName="FortuneID" />
+          <ScalarProperty Name="RetireYears" ColumnName="RetireYears" />
+          <ScalarProperty Name="VacHome" ColumnName="VacHome" />
+          <ScalarProperty Name="Transportation" ColumnName="Transportation" />
+          <ScalarProperty Name="RetirementFunds" ColumnName="RetirementFunds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
